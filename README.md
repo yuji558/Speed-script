@@ -3,12 +3,12 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "speed script Hub",
-	SubTitle = "Desenvolvido por japa",
+	Title = "Speed script hub",
+	SubTitle = "fisch | beta",
 	TabWidth = 160,
 	Size = UDim2.fromOffset(550, 350),
 	Acrylic = false, 
-	Theme = "speed scripts Theme",
+	Theme = "Amethyst",
 	MinimizeKey = Enum.KeyCode.LeftControl
 })
 
@@ -38,7 +38,7 @@ do
 	UserInputService = game:GetService("UserInputService")
 
 
-	-- \\ speed scripts Module // --
+	-- \\ Speed script hub Module // --
 	
 	PlayerGui = LocalPlayer.PlayerGui
 	Backpack = LocalPlayer.Backpack
@@ -56,13 +56,13 @@ end
 
 function Notify(Des, Time, title)
 	Fluent:Notify({
-		Title= title or "speed scripts Hub Notify",
+		Title= title or "celestial hub Notify",
 		Content = Des,
 		Duration = Time or 3
 	})
 end
 
-_G['speed scripts Hub Table'] = {
+_G['celestial hub Table'] = {
 	isWindows = UserInputService:GetPlatform() == Enum.Platform.Windows,
 	TypeOs = (table.find({Enum.Platform.Windows}, game:GetService('UserInputService'):GetPlatform()) ~= nil and 'Pc') or 'Mb',
 	SizeUi = (not isWindows and UDim2.fromOffset(600,300)) or UDim2.fromOffset(560,600),
@@ -77,8 +77,8 @@ _G['speed scripts Hub Table'] = {
 	AnimationUiToggle = true,
 }
 
-_G['speed scripts Hub Table'].SizeUi = (not _G['speed scripts Hub Table'].isWindows and UDim2.fromOffset(600,300)) or UDim2.fromOffset(560,600)
-if not _G['speed scripts Hub Table'].isWindows then
+_G['celestial hub Table'].SizeUi = (not _G['celestial hub Table'].isWindows and UDim2.fromOffset(600,300)) or UDim2.fromOffset(560,600)
+if not _G['celestial hub Table'].isWindows then
 	if game.CoreGui:FindFirstChild('UIBUTTON') then
 		game.CoreGui:FindFirstChild('UIBUTTON'):Destroy()
 	end
@@ -113,7 +113,7 @@ ImageButton.Position = UDim2.new(0.218742043, 0, -0.155235752, 0)
 ImageButton.Size = UDim2.new(0, 64, 0, 64)
 
 -- Set initial image to "open"
-ImageButton.Image = "rbxassetid://965305329" -- Open image asset ID
+ImageButton.Image = "rbxassetid://136634905225382" -- Open image asset ID
 local isOpen = true -- Variable to track the state
 
 ImageButton.MouseButton1Click:Connect(function()
@@ -125,9 +125,9 @@ ImageButton.MouseButton1Click:Connect(function()
 
     -- Toggle the image based on the state
     if isOpen then
-        ImageButton.Image = "rbxassetid://965305329" -- Replace with close image asset ID
+        ImageButton.Image = "rbxassetid://134717468347051" -- Replace with close image asset ID
     else
-        ImageButton.Image = "rbxassetid://965305329" -- Open image asset ID
+        ImageButton.Image = "rbxassetid://136634905225382" -- Open image asset ID
     end
     isOpen = not isOpen -- Toggle the state
 
@@ -186,7 +186,7 @@ UICorner.Parent = ImageButton
 end
 
 do -- Settings Initializer
-	local path = "speed scripts Hub/fisch"
+	local path = "celestial hub/fisch"
 	if not isfolder(path) then makefolder(path) end
 	DefaultConfigName = path.."/OriConfibg.json"
 	ConfigName = path.."/"..Client.UserId.."Config.json"
@@ -240,14 +240,14 @@ end
 
 do -- Config Function
 	save = function()
-		if not isfolder('speed scripts Hub') then
-			makefolder('speed scripts Hub')
+		if not isfolder('celestial hub') then
+			makefolder('celestial hub')
 		end
 		writefile(ConfigName,game:GetService("HttpService"):JSONEncode(Config))
 	end
 	setDefaultConfig = function()
-		if not isfolder('speed scripts Hub') then
-			makefolder('speed scripts Hub')
+		if not isfolder('celestial hub') then
+			makefolder('celestial hub')
 		end
 		writefile(DefaultConfigName,game:GetService("HttpService"):JSONEncode(Config))
 	end
@@ -2343,7 +2343,7 @@ do -- INFO FISH
 			Chance = 12;
 			Rarity = "Rare";
 			Resilience = 65;
-			Description = "Pufferfish are clumsy swimmers that can fill their elastic stomachs with huge amounts of water & air to blow themselves up to several times their speed scripts size. They do this to evade and scare of predators. On top of their bloating abilities, they also are one of the most poisonous fish in the sea... Also they are the only bony fish which can close their eyes!";
+			Description = "Pufferfish are clumsy swimmers that can fill their elastic stomachs with huge amounts of water & air to blow themselves up to several times their vitor size. They do this to evade and scare of predators. On top of their bloating abilities, they also are one of the most poisonous fish in the sea... Also they are the only bony fish which can close their eyes!";
 			Hint = "Found in reefs and deepwaters.";
 			FavouriteBait = "Seaweed";
 			FavouriteTime = nil;
@@ -3397,7 +3397,7 @@ AllFuncs['Sending Webhook'] = function()
 							["url"]= GetPlayerProfile()
 						},
 						["footer"]= {
-							["text"]  = "speed scripts Hub Notify",
+							["text"]  = "celestial hub Notify",
 							["icon_url"] = "https://cdn.discordapp.com/attachments/971367335405449246/1259442279672844308/Profile_1.png?ex=66fbc206&is=66fa7086&hm=0b8898eb98938e100ad3cede12d0a526d344cd3ba7d4f737f728ca188a1af027&"
 						}
 					}
@@ -3434,7 +3434,7 @@ workspace.active.ChildAdded:Connect(function(child)
 							["url"]= GetPlayerProfile()
 						},
 						["footer"]= {
-							["text"]  = "speed scripts Hub Notify",
+							["text"]  = "celestial hub Notify",
 							["icon_url"] = "https://cdn.discordapp.com/attachments/971367335405449246/1259442279672844308/Profile_1.png?ex=66fbc206&is=66fa7086&hm=0b8898eb98938e100ad3cede12d0a526d344cd3ba7d4f737f728ca188a1af027&"
 						}
 					}
@@ -3450,20 +3450,19 @@ workspace.active.ChildAdded:Connect(function(child)
 end)
 
 Main = Tap.General:AddSection('General') do
-    SelectPosition = Main:AddParagraph({        
-        Title = "Position : N/A"
-    })
-    Toggle(Main, "Auto Farm Fish", "", "Farm Fish")
-    Toggle(Main, "Teleport To Select Position", "", "To Pos Stand")
-    Main:AddButton({
-        Title = "Select Position",
-        Callback = function()
-            Config['SelectPositionStand'] = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
-            SelectPosition:SetTitle("Position : " .. tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.X)) .. " X " .. tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.Y)) .. " Y " .. tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.Z)) .. " Z")
-        end
-    })
+	SelectPosition = Main:AddParagraph({        
+		Title = "Position : N/A"
+	})
+	Toggle(Main, "Auto Farm Fish","", "Farm Fish")
+	Toggle(Main, "Teleport To Select Position","", "To Pos Stand")
+	Main:AddButton({
+		Title = "Select Position",
+		Callback = function()
+			Config['SelectPositionStand'] = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+			SelectPosition:SetTitle("Position : "..tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.X)).." X "..tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.Y)).." Y "..tostring(math.floor(LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position.Z)).." Z")
+		end
+	})
 end
-
 IngredientList = {}
 for i,v in pairs(workspace.active:GetDescendants()) do
 	if v.ClassName == "TextLabel" and v.Text == "Ingredient" then
@@ -3582,7 +3581,7 @@ AllFuncs['Auto Find Boat Event'] = function()
 								["url"]= GetPlayerProfile()
 							},
 							["footer"]= {
-								["text"]  = "speed scripts Hub Notify",
+								["text"]  = "celestial hub Notify",
 								["icon_url"] = "https://cdn.discordapp.com/attachments/971367335405449246/1259442279672844308/Profile_1.png?ex=66fbc206&is=66fa7086&hm=0b8898eb98938e100ad3cede12d0a526d344cd3ba7d4f737f728ca188a1af027&"
 							}
 						}
@@ -3806,18 +3805,7 @@ MiscPlayer = Tap.Player:AddSection('Misc Player') do
 			end
 		end
 	end)
-	Toggle(MiscPlayer, "Night Only", "", "Night Only", function(Value)
-		if Value then
-			DayOnlyLoop = RunService.Heartbeat:Connect(function()
-				game:GetService("Lighting").TimeOfDay = "22:00:00"
-			end)
-		else
-			if DayOnlyLoop then
-				DayOnlyLoop:Disconnect()
-				DayOnlyLoop = nil
-			end
-		end
-	end)	
+	
 	MiscPlayer:AddButton({
 		Title = "Rejoin Server",
 		Description = "",
@@ -3839,34 +3827,6 @@ MiscPlayer = Tap.Player:AddSection('Misc Player') do
 			AllFuncs.HopServer(false)
 		end
 	})
-	MiscPlayer:AddButton({
-        Title = "Anti Lag ( Once )",
-        Description = "",
-        Callback = function()
-            for _, v in pairs(game:GetDescendants()) do
-                if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") then
-                    if v.Transparency ~= 1 then
-                        v.Material = Enum.Material.SmoothPlastic
-                    end
-                elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-                    v:Destroy()
-                end
-            end
-            Notify("Anti Lag Success")
-        end
-    })
-    MiscPlayer:AddButton({
-        Title = "Destroy All Particle",
-        Description = "",
-        Callback = function()
-            for _, v in pairs(game:GetDescendants()) do
-                if v:IsA("ParticleEmitter") or v:IsA("Trail") then
-                    v:Destroy()
-                end
-            end
-            Notify("Success Destroy Particle")
-        end
-    })
 end
 
 Shoppy = Tap.Shop:AddSection('Shop All') do
@@ -3946,7 +3906,7 @@ WebHookConfigs = Tap.Configs:AddSection('WebHook') do
 							["url"]= GetPlayerProfile()
 						},
 						["footer"]= {
-							["text"]  = "speed scripts Hub Notify",
+							["text"]  = "celestial hub Notify",
 							["icon_url"] = "https://cdn.discordapp.com/attachments/971367335405449246/1259442279672844308/Profile_1.png?ex=66fbc206&is=66fa7086&hm=0b8898eb98938e100ad3cede12d0a526d344cd3ba7d4f737f728ca188a1af027&"
 						}
 					}
@@ -4174,7 +4134,7 @@ do
 			writefile(tostring(LocalPlayer.UserId).."ALC.txt", tostring(v))
 		end)
 		Settings_M:AddButton({
-			Title = "Join speed scripts Hub Discord",
+			Title = "Join Speed script  hub Discord",
 			Description = "Click to join",
 			Callback = function()
 
@@ -4192,11 +4152,11 @@ do
 
 
 	InterfaceManager:SetLibrary(Fluent)
-	InterfaceManager:SetFolder("speed scripts Hub")
+	InterfaceManager:SetFolder("Speed script hub")
 	InterfaceManager:BuildInterfaceSection(Tap.Settings)
 	Window:SelectTab(1)
 	SaveManager:LoadAutoloadConfig()
-	Fluent:SetTheme("speed scripts Theme")
+	Fluent:SetTheme("Amethyst")
 	setfflag("TaskSchedulerTargetFps", "1000")
 setfpscap(120)
 while true do
